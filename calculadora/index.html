@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="calculadora">
+    <h1 class="titulo">Calculadora</h1>
+
+    <div class="pantalla">
+      <div class="operacion" id="operacion" aria-hidden="true"></div>
+      <output class="resultado" id="resultado" aria-live="polite">0</output>
+    </div>
+
+    <div class="teclado">
+      <button type="button" class="tecla accion" data-accion="limpiar">C</button>
+      <button type="button" class="tecla accion" data-accion="borrar" aria-label="Borrar">⌫</button>
+      <button type="button" class="tecla accion" data-accion="signo">±</button>
+      <button type="button" class="tecla operador" data-operador="/">÷</button>
+
+      <button type="button" class="tecla" data-digito="7">7</button>
+      <button type="button" class="tecla" data-digito="8">8</button>
+      <button type="button" class="tecla" data-digito="9">9</button>
+      <button type="button" class="tecla operador" data-operador="*">×</button>
+
+      <button type="button" class="tecla" data-digito="4">4</button>
+      <button type="button" class="tecla" data-digito="5">5</button>
+      <button type="button" class="tecla" data-digito="6">6</button>
+      <button type="button" class="tecla operador" data-operador="-">−</button>
+
+      <button type="button" class="tecla" data-digito="1">1</button>
+      <button type="button" class="tecla" data-digito="2">2</button>
+      <button type="button" class="tecla" data-digito="3">3</button>
+      <button type="button" class="tecla operador" data-operador="+">+</button>
+
+      <button type="button" class="tecla cero" data-digito="0">0</button>
+      <button type="button" class="tecla" data-accion="decimal">,</button>
+      <button type="button" class="tecla igual" data-accion="igual">=</button>
+    </div>
+  </main>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>

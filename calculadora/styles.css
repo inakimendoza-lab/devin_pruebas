@@ -1,0 +1,131 @@
+:root {
+  --fondo: #11131a;
+  --panel: #1b1e28;
+  --pantalla: #0c0e14;
+  --tecla: #272b38;
+  --tecla-hover: #333949;
+  --operador: #3b5bdb;
+  --operador-hover: #4c6ef5;
+  --accion: #444b5e;
+  --texto: #f1f3f5;
+  --texto-tenue: #8b93a7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: 24px;
+}
+
+.calculadora {
+  width: 100%;
+  max-width: 340px;
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.titulo {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  text-align: center;
+}
+
+.pantalla {
+  background: var(--pantalla);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.operacion {
+  min-height: 20px;
+  font-size: 14px;
+  color: var(--texto-tenue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultado {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultado.error {
+  font-size: 24px;
+  color: #ff8787;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tecla {
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  background: var(--tecla);
+  color: var(--texto);
+  font-size: 20px;
+  font-family: inherit;
+  height: 58px;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.tecla:hover {
+  background: var(--tecla-hover);
+}
+
+.tecla:active {
+  transform: scale(0.96);
+}
+
+.tecla:focus-visible {
+  outline: 2px solid var(--operador-hover);
+  outline-offset: 2px;
+}
+
+.tecla.accion {
+  background: var(--accion);
+}
+
+.tecla.operador,
+.tecla.igual {
+  background: var(--operador);
+  font-weight: 600;
+}
+
+.tecla.operador:hover,
+.tecla.igual:hover {
+  background: var(--operador-hover);
+}
+
+.tecla.cero {
+  grid-column: span 2;
+}
