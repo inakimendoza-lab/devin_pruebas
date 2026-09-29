@@ -48,6 +48,8 @@ function aNumero(texto) {
 function pintar() {
   elResultado.textContent = estado.actual;
   elResultado.classList.toggle('error', estado.error);
+  elResultado.classList.toggle('largo', !estado.error && estado.actual.length > 9);
+  elResultado.classList.toggle('muy-largo', !estado.error && estado.actual.length > 12);
   elOperacion.textContent = estado.operador
     ? `${estado.anterior} ${SIMBOLOS[estado.operador]}`
     : '';

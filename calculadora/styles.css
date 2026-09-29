@@ -69,13 +69,20 @@ body {
   font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
+}
+
+.resultado.largo {
+  font-size: 28px;
+}
+
+.resultado.muy-largo {
+  font-size: 22px;
 }
 
 .resultado.error {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.35;
   color: #ff8787;
 }
 
