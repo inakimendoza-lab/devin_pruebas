@@ -45,6 +45,13 @@ o en tareas cuyo criterio de éxito no se puede comprobar de forma automática.
 
 Detalle en [docs/06-buenas-practicas.md](docs/06-buenas-practicas.md).
 
+## Calculadora de ejemplo
+
+En [`calculadora/`](calculadora/) hay una calculadora web de ejemplo (HTML, CSS
+y JavaScript sin dependencias) con las cuatro operaciones básicas: suma, resta,
+multiplicación y división. Para usarla basta con abrir
+`calculadora/index.html` en el navegador.
+
 ## Enlaces oficiales
 
 - Documentación: https://docs.devin.ai
